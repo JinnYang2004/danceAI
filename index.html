@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Can AI Make Dance?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: rgb(72, 36, 140);
+      background-image: url('Photos/leaf-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .page-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .my-box {
+       width: 800px;             /* Set the width of the box */
+       height: 200px;            /* Set the height of the box */
+       background-color: rgb(72, 36, 140); /* Set the background color of the box */
+       border: 1px solid black;  /* Add a border to the box */
+       padding: 10px;          /* Add some space around the text inside the box */
+       font-family: Poppins;    /* Set the font family for the text */
+       font-size: 16px;         /* Set the font size for the text */
+       color: rgb(255, 255, 255);           /* Set the text color */
+       text-align: center;        /* Center the text horizontally */
+   }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 30px 60px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: transparent;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: rgb(221, 207, 247); /* Teal hover color */
+    }
+
+    .hero {
+      padding-top: 150px; /* To avoid overlap with fixed nav */
+      padding-left: 60px;
+      flex: 1; /* This pushes the footer down */
+    }
+
+    .hero h1 {
+      font-size: 60px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .dancer-img {
+      position: absolute;
+      bottom: 180px;
+      left: 40px;
+      width: 250px;
+      z-index: 10;
+    }
+
+    .dancer-img2 {
+      position: absolute;
+      bottom: 50px;
+      right: 20px;
+      width: 250px;
+      z-index: 10;
+    }
+
+    .dancer-img3 {
+      position: absolute;
+      top: 125px;
+      right: 180px;
+      width: 250px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- Header / Navbar -->
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="our_experiment.html">Our Experiment</a>
+        <a href="gen_ai.html">What is Gen AI?</a>
+        <a href="ethical_conclusion.html">Ethical Conclusions</a>
+        <a href="final_piece.html">Final Piece</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>CAN CHATGPT CREATE A DANCE?</h1>
+      <h2>ABSTRACT OF OUR WORK</h2>
+    </section>
+
+    <!-- Dancer Image1 -->
+    <img 
+      src="Photos/dancer-pose-silhouette-vector-48780012-removebg-preview.png" 
+      alt="Dancer" 
+      class="dancer-img"
+    >
+
+    <!-- Dancer Image2 -->
+    <img 
+      src="Photos\ballet-women-dancing-pose-silhouette-white-background_796908-2-removebg-preview.png" 
+      alt="Dancer2" 
+      class="dancer-img2"
+    >
+
+        <!-- Dancer Image -->
+    <img 
+      src="Photos\ballet-women-dancing-pose-silhouette-white-background_796908-2-removebg-preview.png" 
+      alt="Dancer2" 
+      class="dancer-img2"
+    >
+
+        <!-- Dancer Image -->
+        <img 
+        src="Photos\Dancer3.png" 
+        alt="Dancer3" 
+        class="dancer-img3"
+      >
+
+
+<!-- Box for the Abstract -->
+<section class="my-box" style="position: absolute; top: 320px; left: 300px;">
+    <p>
+      With the growing popularity of generative AI, this software has begun to work its way into the dance community. Gen AI software such as Chat GPT has become increasingly used to generate ideas for choreography. Our team explored this question by creating a dance with ChatGPT. Experimenting directly with the source provided our team with clear insight into the cons as well as the pros of creating a dance with AI. 
+    </p>
+  </section>
+  
+
+    <!-- Footer -->
+    <footer>
+      <p>• Ava Traisci & Jinn Yang 2025</p>
+    </footer>
+  </div>
+
+</body>
+</html>
