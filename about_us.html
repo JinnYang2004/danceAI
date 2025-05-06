@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: rgb(72, 36, 140);
+      background-image: url('Photos/leaf-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .page-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 30px 60px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: transparent;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: rgb(221, 207, 247);
+    }
+
+    .hero {
+      padding-top: 150px;
+      padding-left: 60px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+
+    .about-content {
+      padding: 40px 60px;
+      max-width: 900px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .profile {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .profile-card h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .profile-card p {
+      font-size: 16px;
+      color: #e0e0e0;
+    }
+
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Navbar -->
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="our_experiment.html">Our Experiment</a>
+        <a href="gen_ai.html">What is Gen AI?</a>
+        <a href="ethical_conclusion.html">Ethical Conclusions</a>
+        <a href="final_piece.html">Final Piece</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>ABOUT US</h1>
+      <h2>The Team Behind the AI Dance Project</h2>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+      <p>Hello! Our names are Ava and Jinn. We are students at St. Olaf College, which is located in South-Central Minnesota. We are both Computer Science students who developed this project for our Ethics of Software Design class. Generative AI is being increasingly used to create works, and this increasing prevalence has led to our interest in exploring the ethical concerns that arise when creating something with this software.</p>
+
+      <div class="profile">
+        <div class="profile-card">
+          <h3>Ava Traisci</h3>
+          <p>I am currently a Junior at St. Olaf College.  Along with my interest in Computer Science, I am also on the St. Olaf College Dance Team. The St. Olaf College Dance Team competes in the Division III dance team Jazz Category, which led to our decision on the difficulty level and style of dance we decided to explore in our research. Both dance and computer science are areas that I personally enjoy,  so integrating both of these topics is a passion of mine.  </p>
+        </div>
+
+        <div class="profile-card">
+          <h3>Jinn Yang</h3>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>• Ava Traisci & Jinn Yang 2025</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Experiment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: rgb(72, 36, 140);
+      background-image: url('Photos/leaf-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .page-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 30px 60px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: transparent;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: rgb(221, 207, 247);
+    }
+
+    .hero {
+      padding-top: 150px;
+      padding-left: 60px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+
+    .experiment-content {
+      padding: 40px 60px;
+    }
+
+    .accordion-section button {
+      width: 100%;
+      padding: 16px;
+      background-color: #eee;
+      color: black;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.3s;
+      margin-bottom: 8px;
+    }
+
+    .accordion-section button:hover {
+      background-color: #ddd;
+    }
+
+    .accordion-section .content {
+      display: none;
+      background-color: white;
+      color: black;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Navbar -->
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="our_experiment.html">Our Experiment</a>
+        <a href="gen_ai.html">What is Gen AI?</a>
+        <a href="ethical_conclusion.html">Ethical Conclusions</a>
+        <a href="final_piece.html">Final Piece</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>OUR EXPERIMENT</h1>
+      <h2>How We Made the AI Dance</h2>
+    </section>
+
+    <!-- Experiment Content -->
+    <section class="experiment-content">
+      <div class="accordion-section">
+        <button onclick="toggleAccordion('step1')">Step 1: Defining Our Goals</button>
+        <div id="step1" class="content">
+          <p>We set out to explore how generative AI could assist in producing choreographic sequences, and what limitations or strengths it might have in the realm of artistic movement.</p>
+        </div>
+
+        <button onclick="toggleAccordion('step2')">Step 2: Choosing Tools</button>
+        <div id="step2" class="content">
+          <p>We crafted a precise prompt for ChatGPT and selected OpenPose and Blender for generating motion and visualizing sequences.</p>
+          <img src="Photos/Initial Setup.png" alt="Setup Diagram" style="width:70%; max-width:600px;">
+        </div>
+
+        <button onclick="toggleAccordion('step3')">Step 3: Input Creation</button>
+        <div id="step3" class="content">
+          <p>We structured commands and prompts to create legible pose and motion data interpretable by our tools.</p>
+        </div>
+
+        <button onclick="toggleAccordion('step4')">Step 4: AI Output and Refinement</button>
+        <div id="step4" class="content">
+          <p>We evaluated the AI's generated poses, edited frames for rhythm, and eliminated awkward transitions.</p>
+          <img src="Photos/VisualsDance.jpg" alt="Dance Visuals" style="width:50%; max-width:300px;">
+        </div>
+
+        <button onclick="toggleAccordion('step5')">Step 5: Performance Integration</button>
+        <div id="step5" class="content">
+          <p>The final sequence was taught to Ava, who added interpretation and style, bringing the AI-assisted choreography to life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>• 2025</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleAccordion(id) {
+      const element = document.getElementById(id);
+      element.style.display = element.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
