@@ -103,6 +103,39 @@
       padding: 16px;
       margin-bottom: 20px;
     }
+    .pros-cons-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .pros, .cons {
+      flex: 1;
+      min-width: 250px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .pros h3, .cons h3 {
+      color: rgb(0, 0, 0);
+      margin-bottom: 10px;
+      font-size: 20px;
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+    }
+
+    .pros ul, .cons ul {
+      padding-left: 20px;
+    }
+
+    .pros li, .cons li {
+      margin-bottom: 10px;
+      color: rgb(4, 4, 4);
+      list-style-type: disc;
+    }
 
     footer {
       background: black;
@@ -121,7 +154,7 @@
         <a href="index.html">Home</a>
         <a href="about_us.html">About Us</a>
         <a href="our_experiment.html">Our Experiment</a>
-        <a href="gen_ai.html">What is Gen AI?</a>
+        <a href="gen_ai.html">What is Gen AI/Dance?</a>
         <a href="ethical_conclusion.html">Ethical Conclusions</a>
         <a href="final_piece.html">Final Piece</a>
       </nav>
@@ -136,35 +169,108 @@
     <!-- Experiment Content -->
     <section class="experiment-content">
       <div class="accordion-section">
-        <button onclick="toggleAccordion('step1')">Step 1: Defining Our Goals</button>
+        <button onclick="toggleAccordion('step1')">Step 1: Initial Setup:</button>
         <div id="step1" class="content">
-          <p>We set out to explore how generative AI could assist in producing choreographic sequences, and what limitations or strengths it might have in the realm of artistic movement.</p>
-        </div>
-
-        <button onclick="toggleAccordion('step2')">Step 2: Choosing Tools</button>
-        <div id="step2" class="content">
-          <p>We crafted a precise prompt for ChatGPT and selected OpenPose and Blender for generating motion and visualizing sequences.</p>
+          <p>Upon starting our exploration, it was crucial for us to craft a prompt so ChatGPT knew what we expected. We determined it was important for us to establish the number of people who would perform this dance, the difficulty level of the dance, an array of styles the dance should be, the length of the dance, a song, a theme, and some additional materials we wanted: </p>
           <img src="Photos/Initial Setup.png" alt="Setup Diagram" style="width:70%; max-width:600px;">
+          <p>These specifications allowed us to craft our input.</p>
+
         </div>
 
-        <button onclick="toggleAccordion('step3')">Step 3: Input Creation</button>
+        <button onclick="toggleAccordion('step2')">Step 2: Prompting ChatGPT for an outline of the routine</button>
+        <div id="step2" class="content">
+          <p>Upon receiving our initial prompt, ChatGPT was able to provide a pretty clear outline of the routine. After listening to the song suggested, the theme ChatGPT recommended (“The Fragility of Time and Memory”), fit well with the overall meaning of the song. The outline was also organized and made sense. Despite us saying that we wanted the routine to be the length of the song, ChatGPT recognized that typical dances range from 2-3 minutes (which was pleasantly surprising).</p>
+          <br>
+          <p>Choreographing Section One:</p>
+          <br>
+          <p>Since everything made sense with the outline, and all of the choreography seemed to flow, we decided to move forward and begin choreographing the first section of the dance that was previously outlined with ChatGPT. In our prompt, we wanted to specify that we wanted an organized “list-like” output of various movements, and when they should occur. </p>
+          <br>
+          <p>At this point, we began to realize some more attributes we probably should have included in our prompt. We also realized that choreographing this first section of the dance with ChatGPT was going to be kind of experimental regarding how we would craft a prompt whose output gives us exactly what we want. ChatGPT itself was not able to recognize music cues, so at this moment, we realized this is something that was going to need to be manually added to our prompt.</p>  
+          <br>
+          <p>Overall, after we gave ChatGPT some more information regarding the music, ChatGPT was able to craft choreography that fit the flowy nature of the first part of the music. However, at this point, again, we realized we had made a mistake when asking ChatGPT to set the choreography to the music. We needed to specify to the program that while the song has typical minute and second timing, dances are normally set to counts of 8 to document the timing of when certain moves should take place. This was going to need to be something we specified later on. Based on ChatGPT’s most recent output at this point, the program asked us if we wanted a written or visual diagram of the spacing. This sounded extremely helpful, so we told ChatGPT that this was something we wanted.</p>
+        </div>
+
+        <button onclick="toggleAccordion('step3')">Step 3: Choreographing Section One:</button>
         <div id="step3" class="content">
-          <p>We structured commands and prompts to create legible pose and motion data interpretable by our tools.</p>
+          <p>Overall, ChatGPT provided a fairly clear list of how the routine should move across the floor. We were overall quite impressed with the fact that the program knew to include descriptions of movement that would get us to different points on the floor as well. However, we also wanted ChatGPT to provide a visual, which it did not initially. Because of this, we asked for a visual diagram during our next input.</p>
+          <img src="Photos\VisualsDance.jpg" alt="Setup Diagram" style="width:55%; max-width:400px;">
+          <p>Now, here’s where our impression of ChatGPT’s capabilities took a turn, a little bit. The visual diagram of how the dance should move did not make a ton of sense. There were several grammatical and spelling errors present in the diagram that made it quite difficult to understand. As well as many of the stage directions did not make sense, and did not correspond with what was described in the written staging instructions. For example, the written instructions described the Arabesque Extension as taking place towards the front of the stage (downstage), where the diagram shows the same Arabesque Extension taking place in the middle of the stage. Overall, we were a bit disappointed in the quality of the diagram ChatGPT produced, and decided we would not ask for this feature when choreographing the remaining sections of the dance.</p>
+          <br>
+          <p>After taking care of the staging of the dance, we decided it would be a good time to re-set-up the timing of the first section. As previously mentioned, dance choreography is typically set to multiple counts of 8 (1-2-3-4-5-6-7-8 → 1-2-3-4-5-6-7-8→…), and the choreography prompts ChatGPT provided us were set to seconds and minutes. It would be very difficult to choreograph in seconds and minutes (as this way of counting does not match up the the timing of the music), so we wanted to specify that we needed the timing in 8 counts.</p>
+          <br>
+          <p>Overall, ChatGPT was able to modify the timing of the choreography to 8 counts very clearly. All of the counts were clear and made sense. ChatGPT also varied the timings of the movements, which was terrific as the movements and the overall routine will appear more dynamic this way.</p>
+          <br>
+          <p>We now determined that the Section One choreography is complete and could begin choreographing Section Two.</p>
+          <br>
+          <p>Overall thoughts after choreographing Section One:</p>
+          <br>
+          <p>The process of choreographing Section One definitely was our team’s opportunity to examine inadequacies in our original prompt. We determined that in our original prompt, we should have specified all of the aspects we specified originally (number of people who would perform this dance, the difficulty level of the dance, an array of styles the dance should be, the length of the dance, a song, a theme, and some additional materials we wanted) as well as for there to be a written description of the stage directions (where the individual movements should take place), any musical cues/ accents where special movements should occur should be specified, and all the movements should be choreographed to 8 count timing.</p>
         </div>
 
-        <button onclick="toggleAccordion('step4')">Step 4: AI Output and Refinement</button>
+        <button onclick="toggleAccordion('step4')">Step 4: Choreographing Section Two:</button>
         <div id="step4" class="content">
-          <p>We evaluated the AI's generated poses, edited frames for rhythm, and eliminated awkward transitions.</p>
-          <img src="Photos/VisualsDance.jpg" alt="Dance Visuals" style="width:50%; max-width:300px;">
+          <p>To begin choreographing Section Two, we decided to craft a new prompt including some of the aspects we realized were missing from the original prompt. To also ensure that the sections outlined originally matched up with the 8 count timing that we now wanted, we decided to count out section two of the routine so we could specify to ChatGPT exactly how many 8 counts of choreography we wanted. We also listened to the music and determined that there was a big musical cue where a dynamic movement would be impactful, so we decided to specify this to ChatGPT as well. </p>
+          <br>
+          <p>Overall, ChatGPT provided its clearest output yet. It gave our team a clear outline of what movements should be performed and what time they should be performed. ChatGPT also built the choreography around the big musical note, which was great as well. One thing we did notice at this point was that after specifying we wanted the timing of the movements in 8 count form, the length of section two no longer matched the original length of section two specified by ChatGPT in the original general outline. The original general outline specified that the length of section two spanned from 30 seconds to 1 minute and 15 seconds of the song, while the duration of section two specified in the choreography outline for section two had the section spanning from 30 seconds to 1 minute and 7 seconds. Now, this overlook did not necessarily throw off our choreography or process at this point, however, it is important to make note that in this area, we recieved some contradicting information. </p>
+          <br>
+          <p>An actual issue we saw in this output was that ChatGPT wanted there to be a traveling a la second turn sequence. Now, if you have any dance experience, you know that traveling a la seconde turns are not really a thing, and traveling during these turns is generally considered bad technique. For this reason, we wanted to work with ChatGPT to change the turn sequence. </p>
+          <br>
+          <p>After specifying to ChatGPT that we wanted the turn sequence to be updated, the program indeed updated the turnset. However, ChatGPT turned the turn sequence into piqué turns and attitude turns. Now, technically, there is nothing wrong with this, however, our team wanted to keep the idea of having open turns at this moment in the routine. We then decided to prompt ChatGPT to give us a turn sequence of non-traveling a la seconde turns. </p>
+          <br>
+          <p>At this point, we were now satisfied with the turn sequence specified by ChatGPT. Throughout the re-choreographing of the turn sequence, we were impressed by ChatGPT’s adaptability to our specifications, as we were able to arrive at a final output that met our criteria.</p>
+          <br>
+          <p>Overall thoughts after choreographing Section Two:</p>
+          <p>Choreographing Section Two went a bit more smoothly compared to choreographing Section One. After adding the necessary attributes to our initial prompt for Section Two that we determined were missing in Section One, ChatGPT was able to give us exactly what we expected for our Choreography Outline for Section Two. Despite the hiccup with choreographing the turn sequence, after communicating our standards with ChatGPT, ChatGPT was able to give us a turn sequence we were satisfied with, as well as a final choreographic outline that specified what we wanted. </p>
         </div>
 
-        <button onclick="toggleAccordion('step5')">Step 5: Performance Integration</button>
+        <button onclick="toggleAccordion('step5')">Step 5: Choreographing Section Three:</button>
         <div id="step5" class="content">
-          <p>The final sequence was taught to Ava, who added interpretation and style, bringing the AI-assisted choreography to life.</p>
+          <p>To begin choreographing Section Three, we decided to use a prompt that was similar to what was used for Section Two. We once again specified the amount of 8 counts in this section, along with the musical accent. </p>
+          <br>
+          <p>Overall, ChatGPT gave us a similar choreographic outline for this section to the choreographic outline provided for Section Two, which was exactly what we wanted and expected. All of the movements outlined in this section made sense. ChatGPT also gave us suggestions as to what movement should occur on the musical accent, which was terrific. One error that occurred again was that the time stamps for Section Three were outlined differently here than they were in the General Outline for the routine. This same situation happened when choreographing Section Two, however, when choreographing Section Two, the time stamp was only off by a few seconds. In this situation, the time stamp was off by about 30 seconds, so this was something that we wanted to address with ChatGPT, mostly because this affected the amount of 8 counts present in this section.</p>
+          <br>
+          <p>After addressing the incorrect time stamps for Section Three, ChatGPT provided us a clear outline of movements to include in this section, along with the correct amount of choreography. Our team was again impressed by ChatGPT’s adaptability to interpret our corrections and provide us with an output that we wanted. </p>
+          <br>
+          <p>Choreographing Section Three went very similarly to choreographing Section Two. Upon our initial input, ChatGPT was able to provide us a very clear outline of choreography with ALMOST everything our team wanted. After addressing with ChatGPT where some of the faults in the outline provided occured, ChatGPT was able to update the outline to meet our criteria. </p>
+        </div>
+        <button onclick="toggleAccordion('step6')">Step 6: Choreographing Section Four:</button>
+        <div id="step6" class="content">
+        <p>To begin choreographing Section Four, we once again entered a prompt that was similar to both of the initial prompts for Section Two and Section Three. Our team specified musical accents in the song, where accents in the choreography should also occur. Something unique to this prompt was the inclusion of the ending point of the dance.  Our team decided to find a good stopping point in the music to end the routine, and specify to ChatGPT how many 8 counts of choreography we wanted, with this in mind.</p>
+        <br>
+        <p>Overall, ChatGPT provided the clearest outline of choreography it had for Section Four. After reviewing the outline, there were no corrections or suggestions we wanted to give ChatGPT regarding the movements it provided. We were very impressed with the output for this section. </p>
+        <br>
+        <p>We then determined that the choreography for the routine was complete!</p>
+        <br>
+        <p>Overall thoughts after choreographing Section Four: Choreographing Section Four went the smoothest it had gone for any of the sections. ChatGPT gave us movement prompts that made sense, which made correcting the outline unnecessary. ChatGPT was also very responsive to the stopping point we specified in the routine and provided us with the correct amount of choreography we wanted. </p>
+      </div>
+
+      <button onclick="toggleAccordion('TakeAway')">Take Aways of using Choreography with AI</button>
+      <div id="TakeAway" class="content">
+        <p>Throughout the choreographic process for this project, our team was able to compile some opinions regarding ChatGPT's performance:</p>
+        <div class="pros-cons-container">
+          <div class="pros">
+            <h3>Pros</h3>
+            <ul>
+              <li>ChatGPT provided clear and concise outlines of choreography. This leads our team to believe that ChatGPT could be a helpful tool when/ if a choreographer experiences a creative block when choreographing a section of a dance.</li>
+              <li>ChatGPT provided a unique theme and song that both fit the style of dance specified as well.</li>
+              <li>ChatGPT gave choreography prompts at an appropriate difficulty level compared to the level of difficulty we asked for.</li>
+              <li>ChatGPT provided unique and non-repetitive choreography prompts that led to a more dynamic piece. </li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>Cons</h3>
+            <ul>
+              <li>ChatGPT is not a real person. Choreography is typically taught visually. A choreographer typically performs small sections of the routine that the dancer then memorizes.  It can be difficult to understand choreography from reading its instructions. However, this may be seen as a positive, as someone choreographing a routine with ChatGPT will have to use their own brains as well to interpret the written prompt provided by ChatGPT, leading to more creativity and autonomy.</li>
+              <li>ChatGPT can not directly “hear” the music. Dances are typically set to music, and the movements normally accentuate aspects of the song being used. ChatGPT cannot directly hear the music, so all music cues need to be written into the prompts given to ChatGPT. </li>
+              <li>ChatGPT could not produce quality visual diagrams.</li>
+              <li>Some choreography that ChatGPT suggested was not necessarily movements that would have been our team’s first choice. However, these aspects could always be changed. </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
 
+    </div>
+  </section>
     <!-- Footer -->
     <footer>
       <p>• 2025</p>
